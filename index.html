@@ -95,8 +95,8 @@
 
       <article class="card two">
         <div class="section-title"><h2>Place Your Order</h2><span class="tag">Takes ~1 minute</span></div>
-        <!-- Netlify Forms captures submissions automatically on Netlify -->
-        <form name="order" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form">
+        <!-- Netlify Forms captures submissions automatically on Netlify; redirect to success.html -->
+        <form name="order" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" class="form">
           <input type="hidden" name="form-name" value="order" />
           <p hidden>
             <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
@@ -116,6 +116,12 @@
               <label for="phone">Phone</label>
               <input id="phone" name="phone" type="tel" required placeholder="e.g., +1 555 123 4567" />
             </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="e.g., maria@example.com" />
+            </div>
+          </div>
+          <div class="row">
             <div>
               <label for="date">Delivery date</label>
               <input id="date" name="delivery_date" type="date" required />
@@ -141,3 +147,4 @@
   </script>
 </body>
 </html>
+
